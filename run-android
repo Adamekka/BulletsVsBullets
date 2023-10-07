@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cargo apk run -p mobile
+
+device=$(adb devices | sed -n "2 p" | cut -c 1-8)
+adb -s "$device" install target/debug/apk/BulletsVsBullets.apk
