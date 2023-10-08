@@ -24,9 +24,15 @@ enum JoySticks {
 }
 
 #[derive(Debug, Default, Resource)]
-struct Input {
-    movement: Option<Vec2>,
-    combat: Option<f32>,
+pub struct Input {
+    pub movement: Option<Vec2>,
+    pub combat: Option<f32>,
+}
+
+impl Input {
+    pub fn is_empty(&self) -> bool {
+        self.movement.is_none() && self.combat.is_none()
+    }
 }
 
 fn spawn_joysticks(mut commands: Commands, asset_server: Res<AssetServer>) {
