@@ -29,4 +29,4 @@ dev = ["bevy/bevy_dylib"]
 
 [dependencies]
 bevy = "0"
-bevy_mod_picking = "0"
+virtual_joystick = "2"

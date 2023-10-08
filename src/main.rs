@@ -1,5 +1,4 @@
 use bevy::{prelude::*, window::WindowMode};
-use bevy_mod_picking::DefaultPickingPlugins;
 use bullets_vs_bullets::GamePlugin;
 
 fn main() {
@@ -14,7 +13,6 @@ fn main() {
             }),
             ..default()
         }))
-        .add_plugins(DefaultPickingPlugins)
         .add_plugins(GamePlugin)
         .run();
 }
