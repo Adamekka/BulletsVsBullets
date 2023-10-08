@@ -288,6 +288,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "bevy-fps-counter"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c21a13a111460f180f08b54077bfb368bf684b2d97e3899cdae4d41abdd54c6f"
+dependencies = [
+ "bevy",
+]
+
+[[package]]
 name = "bevy_a11y"
 version = "0.11.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1094,6 +1103,7 @@ name = "bullets_vs_bullets"
 version = "0.1.0"
 dependencies = [
  "bevy",
+ "bevy-fps-counter",
  "virtual_joystick",
 ]
 

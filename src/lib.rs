@@ -1,4 +1,5 @@
 use bevy::prelude::*;
+use bevy_fps_counter::FpsCounterPlugin;
 use camera::CameraPlugin;
 use input::InputPlugin;
 use player::PlayerPlugin;
@@ -13,6 +14,10 @@ pub struct GamePlugin;
 
 impl Plugin for GamePlugin {
     fn build(&self, app: &mut App) {
-        app.add_plugins((CameraPlugin, InputPlugin, PlayerPlugin, WorldPlugin));
+        app
+            // External
+            .add_plugins(FpsCounterPlugin)
+            // Mine
+            .add_plugins((CameraPlugin, InputPlugin, PlayerPlugin, WorldPlugin));
     }
 }

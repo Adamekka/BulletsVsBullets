@@ -29,4 +29,5 @@ dev = ["bevy/bevy_dylib"]
 
 [dependencies]
 bevy = "0"
+bevy-fps-counter = "0"
 virtual_joystick = "2"
